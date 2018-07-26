@@ -13,7 +13,7 @@
         <!--Inches and Centimeters-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Inches and Centimeters" id="BYZ-38-t0r" customClass="ViewController" customModule="InchesAndCentimeters" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Inches and Centimeters" id="BYZ-38-t0r" customClass="InchesAndCentimetersViewController" customModule="InchesAndCentimeters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,12 +41,18 @@
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="128"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="centimeterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="1Ba-Uu-bz4"/>
+                                                </connections>
                                             </textField>
                                             <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="0.0" textAlignment="center" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="Hec-ha-FVs">
                                                 <rect key="frame" x="0.0" y="16" width="375" height="153"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="128"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="inchFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Qjc-LR-8PZ"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="=" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h69-Cu-P3M">
                                                 <rect key="frame" x="143.33333333333334" y="204.33333333333334" width="88.333333333333343" height="359.33333333333326"/>
@@ -101,6 +107,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="centimeterField" destination="UrX-vl-kK3" id="Cr7-E8-xyr"/>
+                        <outlet property="inchField" destination="Hec-ha-FVs" id="MY3-KE-Xdp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
