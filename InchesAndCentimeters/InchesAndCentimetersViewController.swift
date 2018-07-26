@@ -11,6 +11,7 @@ import UIKit
 class InchesAndCentimetersViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var inchField: UITextField!
     @IBOutlet var centimeterField: UITextField!
+    @IBOutlet var inchLabel: UILabel!
     
     @IBAction func inchFieldChanged(_ sender: UITextField) {
         if sender.text!.isEmpty {
@@ -22,6 +23,8 @@ class InchesAndCentimetersViewController: UIViewController, UITextFieldDelegate 
         } else {
             centimeterField.text = "???"
         }
+        
+        inchLabel.text = "INCH\(self.inchValue == 1 ? "" : "ES")"
     }
     
     @IBAction func centimeterFieldChanged(_ sender: UITextField) {
@@ -34,6 +37,7 @@ class InchesAndCentimetersViewController: UIViewController, UITextFieldDelegate 
         } else {
             inchField.text = "???"
         }
+        inchLabel.text = "INCH\(self.inchValue == 1 ? "" : "ES")"
     }
     
     var inchValue:Float = 0.0

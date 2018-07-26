@@ -112,6 +112,7 @@
                     <connections>
                         <outlet property="centimeterField" destination="UrX-vl-kK3" id="Cr7-E8-xyr"/>
                         <outlet property="inchField" destination="Hec-ha-FVs" id="MY3-KE-Xdp"/>
+                        <outlet property="inchLabel" destination="YIL-aC-Wrr" id="o3q-J1-Gcs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
