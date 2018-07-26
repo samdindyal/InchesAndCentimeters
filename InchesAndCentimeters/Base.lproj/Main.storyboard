@@ -31,13 +31,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS6-pi-eT1">
-                                                <rect key="frame" x="174" y="732" width="26.666666666666657" height="19.333333333333371"/>
+                                                <rect key="frame" x="174" y="525.66666666666663" width="26.666666666666657" height="19.333333333333371"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="0.0" textAlignment="center" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="UrX-vl-kK3">
-                                                <rect key="frame" x="8" y="571.66666666666663" width="359" height="153"/>
+                                                <rect key="frame" x="8" y="365.33333333333331" width="359" height="152.99999999999994"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="128"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -57,7 +57,7 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="=" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h69-Cu-P3M">
-                                                <rect key="frame" x="143.33333333333334" y="204.33333333333334" width="88.333333333333343" height="359.33333333333326"/>
+                                                <rect key="frame" x="143.33333333333334" y="204.33333333333337" width="88.333333333333343" height="153"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="128"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                                             <constraint firstItem="vS6-pi-eT1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K5L-1z-9my" secondAttribute="leading" constant="8" id="GBt-z4-7kU"/>
                                             <constraint firstItem="UrX-vl-kK3" firstAttribute="centerX" secondItem="Hec-ha-FVs" secondAttribute="centerX" id="KTb-pE-6bI"/>
                                             <constraint firstItem="Hec-ha-FVs" firstAttribute="top" secondItem="K5L-1z-9my" secondAttribute="top" constant="16" id="Oki-ZC-Vxu"/>
-                                            <constraint firstAttribute="bottom" secondItem="vS6-pi-eT1" secondAttribute="bottom" constant="16" id="Qz6-Kl-QDc"/>
+                                            <constraint firstAttribute="bottom" secondItem="vS6-pi-eT1" secondAttribute="bottom" constant="223" id="Ork-wf-8QN"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UrX-vl-kK3" secondAttribute="trailing" constant="8" id="RUk-YA-lhF"/>
                                             <constraint firstItem="UrX-vl-kK3" firstAttribute="leading" secondItem="K5L-1z-9my" secondAttribute="leading" constant="8" id="Rfg-ms-a6I"/>
                                             <constraint firstItem="h69-Cu-P3M" firstAttribute="centerX" secondItem="Hec-ha-FVs" secondAttribute="centerX" id="Rse-6t-oj3"/>
@@ -98,6 +98,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="K5L-1z-9my" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="NlP-Cj-yLt"/>
                             <constraint firstItem="tvC-vQ-GrQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q7u-v4-vJG"/>
@@ -107,6 +108,9 @@
                             <constraint firstAttribute="bottom" secondItem="tvC-vQ-GrQ" secondAttribute="bottom" id="yEs-w5-q48"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2nR-ar-Ub5" appends="YES" id="mbL-3H-JrX"/>
+                        </connections>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -116,6 +120,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2nR-ar-Ub5">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="FaR-mP-MwM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
         </scene>

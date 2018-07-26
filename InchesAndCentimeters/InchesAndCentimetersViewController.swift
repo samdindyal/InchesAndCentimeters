@@ -67,4 +67,9 @@ class InchesAndCentimetersViewController: UIViewController, UITextFieldDelegate 
         
         return existingTextHasSeparator == nil || replacementTextHasSeparator == nil
     }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        self.centimeterField.resignFirstResponder()
+        self.inchField.resignFirstResponder()
+    }
 }
