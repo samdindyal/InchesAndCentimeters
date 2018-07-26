@@ -18,7 +18,7 @@ class InchesAndCentimetersViewController: UIViewController, UITextFieldDelegate 
         } else if let inchValue = Float(sender.text!) {
             self.inchValue = inchValue
             self.centimeterValue = convertToCentimeters(from: self.inchValue)
-            centimeterField.text = "\(self.centimeterValue)"
+            centimeterField.text = numberFormatter.string(from: NSNumber(value: self.centimeterValue))
         } else {
             centimeterField.text = "???"
         }
@@ -30,7 +30,7 @@ class InchesAndCentimetersViewController: UIViewController, UITextFieldDelegate 
         } else if let centimeterValue = Float(sender.text!) {
             self.centimeterValue = centimeterValue
             self.inchValue = convertToInches(from: self.centimeterValue)
-            inchField.text = "\(self.inchValue)"
+            inchField.text = numberFormatter.string(from: NSNumber(value: self.inchValue))
         } else {
             inchField.text = "???"
         }
@@ -38,6 +38,13 @@ class InchesAndCentimetersViewController: UIViewController, UITextFieldDelegate 
     
     var inchValue:Float = 0.0
     var centimeterValue:Float = 0.0
+    
+    var numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 3
+        return formatter
+    }()
     
     func convertToCentimeters(from inchValue: Float) -> Float {
         return inchValue * 2.54
