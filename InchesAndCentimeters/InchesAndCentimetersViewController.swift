@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InchesAndCentimetersViewController: UIViewController {
+class InchesAndCentimetersViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var inchField: UITextField!
     @IBOutlet var centimeterField: UITextField!
     
@@ -45,5 +45,15 @@ class InchesAndCentimetersViewController: UIViewController {
     
     func convertToInches(from centimeterValue: Float) -> Float{
         return centimeterValue / 2.54
+    }
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        let existingTextHasSeparator = textField.text?.range(of: ".")
+        let replacementTextHasSeparator = string.range(of: ".")
+        
+        return existingTextHasSeparator == nil || replacementTextHasSeparator == nil
     }
 }

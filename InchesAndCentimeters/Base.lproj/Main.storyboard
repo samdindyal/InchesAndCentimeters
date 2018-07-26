@@ -43,6 +43,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <action selector="centimeterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="1Ba-Uu-bz4"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wp9-rd-q5t"/>
                                                 </connections>
                                             </textField>
                                             <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="0.0" textAlignment="center" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="Hec-ha-FVs">
@@ -52,6 +53,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <action selector="inchFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Qjc-LR-8PZ"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ins-84-13l"/>
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="=" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h69-Cu-P3M">
